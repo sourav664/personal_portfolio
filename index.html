@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 
 </head>
 <body class="is-preload" >
@@ -18,7 +21,7 @@
     <!-- <a class="navbar-brand" href="#">
 		  Sourav Raj
 	  </a> -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <button class="navbar-toggler ms-auto"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -43,6 +46,9 @@
 		   <li class="nav-item">
             <a class="nav-link mx-lg-2" href="#certificates">Certificates</a>
           </li>
+       <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="#blog">Blogs</a>
+          </li>
 		   <li class="nav-item">
             <a class="nav-link mx-lg-2" href="#contact">Contact</a>
           </li>
@@ -50,7 +56,7 @@
             <a href="https://github.com/sourav664" target="_blank" class="nav-link mx-lg-2 icon brands fa-github" title="GitHub"></a>
           </li>
 		   <li class="nav-item">
-            <a href="https://linkedin.com/in/yourusername" target="_blank" class="nav-link mx-lg-2 icon brands fa-linkedin-in" title="LinkedIn"></a>
+            <a href="https://www.linkedin.com/in/sourav664" target="_blank" class="nav-link mx-lg-2 icon brands fa-linkedin-in" title="LinkedIn"></a>
           </li>
           
         </ul>
@@ -103,7 +109,7 @@
         <p><strong >Data & Viz:</strong> Pandas, NumPy, Matplotlib, Seaborn, Plotly</p>
         <p><strong>Machine Learning:</strong> Scikit-learn, XGBoost, LightGBM</p>
         <p><strong>Deep Learning:</strong> TensorFlow, PyTorch, Keras</p>
-        <p><strong>MLOps:</strong> MLflow, Airflow, FastAPI</p>
+        <p><strong>API:</strong> Flask, FastAPI</p>
       </div>
     </div>
   </div>
@@ -118,14 +124,15 @@
     </header>
     <div class="project-grid">
       <div class="project-card">
-        <img src="images/real-estate.jpg" alt="Real Estate Price Prediction" class="project-image">
-        <h3>Real Estate Price Prediction</h3>
-        <p>Developed a regression model to predict house prices using a stacked ensemble of LGBMRegressor and Linear Regression. Integrated DVC, MLflow, and Docker to automate model training and deployment. 
-          Implemented CI/CD workflows for scalable ML delivery. Achieved R² score of 0.80(still in developing phase).</p>
-        <p><strong>Tools:</strong> <span class="tag">Python</span>, <span class="tag">Pandas</span>, <span class="tag">Scikit-learn</span>, <span class="tag">Streamlit</span>
-            <span class="tag">DVC</span>, <span class="tag">MLflow</span>, <span class="tag">Docker</span>, <span class="tag">GithubAction</span>
+        <img src="images/twitter.png" alt="Twitter Sentiment Analysis" class="project-image">
+        <h3>Twitter Sentiment Analysis</h3>
+        <p>Developed a Twitter Sentiment Analysis model using PyTorch with LSTM, processing 50,000 tweets with SpaCy and NLTK for text preprocessing.
+          Optimized model hyperparameters with Optuna, achieving 97% accuracy on training data and 90% accuracy on test data.
         </p>
-        <a href="https://github.com/sourav664/real-estate-price-prediction" target="_blank" class="btn btn-outline-link">View Code</a>
+        <p><strong>Tools:</strong> <span class="tag">Python</span>, <span class="tag">Pandas</span>, <span class="tag">Scikit-learn</span>, <span class="tag">Streamlit</span>
+            <span class="tag">PyTorch</span>, <span class="tag">LSTM</span>,<span class="tag">Optuna</span>, <span class="tag">SpaCy</span>, <span class="tag">NLTK</span>
+        </p>
+        <a href="https://github.com/sourav664/twitter-sentiments-analysis" target="_blank" class="btn btn-outline-link">View Code</a>
       </div>
       <div class="project-card">
         <img src="images/music3.jpg" alt="Spotify Hybrid Recommender System" class="project-image">
@@ -135,9 +142,23 @@
           Implemented CI/CD workflows for scalable ML delivery.
         </p>
         <p><strong>Tools:</strong> <span class="tag">Python</span>, <span class="tag">Pandas</span>, <span class="tag">Scikit-learn</span>, <span class="tag">Streamlit</span>
-            <span class="tag">DVC</span>, <span class="tag">MLflow</span>, <span class="tag">Docker</span>, <span class="tag">GithubAction</span>
+            <span class="tag">DVC</span>, <span class="tag">MLflow</span>, <span class="tag">Docker</span>, <span class="tag">GithubAction</span>, <span class="tag">AWS S3</span>,
+            <span class="tag">AWS EC2</span>, <span class="tag">AWS ECR</span>, <span class="tag">AWS CodeDeploy</span>
           </p>
         <a href="https://github.com/sourav664/spotify-hybrid-recommender-system" target="_blank" class="btn btn-outline-link">View Code</a>
+      </div>
+       <div class="project-card">
+        <img src="images/uber1.png" alt="Uber Demand Prediction" class="project-image">
+        <h3>Uber Demand Prediction</h3>
+        <p>Built a Regression Model to predict Uber ride demand using Linear Regression with feature extraction via Mini-Batch K-Means Clustering for improved prediction accuracy.
+          Implemented a reproducible ML pipeline by integrating DVC, MLflow, and Docker to automate model training, tracking, and deployment. </p>
+        <p><strong>Tools:</strong> <span class="tag">Python</span>, <span class="tag">Pandas</span>, <span class="tag">Scikit-learn</span>, <span class="tag">Linear Regression</span>, 
+            <span class="tag">Mini-Batch K-Means Clustering</span>, <span class="tag">Streamlit</span>
+            <span class="tag">DVC</span>, <span class="tag">MLflow</span>, <span class="tag">Docker</span>, <span class="tag">GithubAction</span>,
+            <span class="tag">AWS S3</span>,
+            <span class="tag">AWS EC2</span>, <span class="tag">AWS ECR</span>, <span class="tag">AWS CodeDeploy</span>
+          </p>
+        <a href="https://github.com/sourav664/uber-demand-prediction" target="_blank" class="btn btn-outline-link">View Code</a>
       </div>
       <div class="project-card">
         <img src="images/food_delivery2.png" alt="Swiggy Delivery Time Prediction" class="project-image">
@@ -146,7 +167,10 @@
           Integrated DVC, MLflow, and Docker to automate model training and deployment. 
           Implemented CI/CD workflows for scalable ML delivery. Achieved R² score of 0.84.</p>
         <p><strong>Tools:</strong> <span class="tag">Python</span>, <span class="tag">Pandas</span>, <span class="tag">Scikit-learn</span>, <span class="tag">LightGBM</span>, <span class="tag">Streamlit</span>
-            <span class="tag">DVC</span>, <span class="tag">MLflow</span>, <span class="tag">Docker</span>, <span class="tag">GithubAction</span></p>
+            <span class="tag">DVC</span>, <span class="tag">MLflow</span>, <span class="tag">Docker</span>, <span class="tag">GithubAction</span>,
+             <span class="tag">AWS S3</span>,
+            <span class="tag">AWS EC2</span>, <span class="tag">AWS ECR</span>, <span class="tag">AWS CodeDeploy</span>
+          </p>
         <a href="https://github.com/sourav664/swiggy-delivery-time-prediction" target="_blank" class="btn btn-outline-link">View Code</a>
       </div>
       <div class="project-card">
@@ -203,23 +227,84 @@
     </header>
     <div class="cert-grid">
       <div class="cert-card">
-        <h3>TensorFlow Developer Certificate</h3>
-        <p>Validated ability to build and deploy deep learning models using TensorFlow 2.x.</p>
+        <img src="images/campusx-certificate.png" alt="DSMP 2 Certificate" class="cert-img" />
+        <h3>Data Science Mentorship Program 2 (DSMP 2) by CampusX</h3>
+        <p>A comprehensive data science course certification that covered Python, SQL, data visualization, machine learning and MLOps.</p>
+         <p class="cert-date">Completed: January 10, 2025</p>
       </div>
       <div class="cert-card">
-        <h3>Docker for Developers</h3>
-        <p>Gained practical knowledge in containerization, Dockerfiles, and managing environments.</p>
+        <img src="images/ml_certificates.jpg" alt="ML Certificate" class="cert-img" />
+        <h3>Machine Learning A-Z: AI, Python & R </h3>
+        <p>Learned the fundamentals of machine learning , deep learning and applied it to real-world problems.</p>
+         <p class="cert-date">Completed: July 7, 2025</p>
       </div>
       <div class="cert-card">
-        <h3>IBM Data Science Professional Certificate</h3>
-        <p>A comprehensive 9-course certification that covered Python, SQL, data analysis, and ML workflows.</p>
+        <img src="images/udemy_python_certificate.jpg" alt="Python Certificate" class="cert-img" />
+        <h3>100 Days of Code: The Complete Python Pro Bootcamp </h3>
+        <p>Developed strong Python skills to support advanced analytics and problem-solving. </p>
+         <p class="cert-date">Completed: Feb 12, 2024</p>
       </div>
+      
+     
     </div>
   </div>
 </section>
 
 
 
+<!-- Blog -->
+<section id="blog" class="blog-section wrapper style3">
+  <h2>My Blogs</h2>
+<div class="container swiper">
+  <div class="card-wrapper">
+    <ul class="card-list swiper-wrapper">
+      <li class="card-item swiper-slide">
+        <a href="https://medium.com/@souravraj664/logistic-regression-for-classification-problems-3f5185eb0da7"  target="_blank" class="card-link">
+          <img src="images/logistic_regression.png" alt="" class="card-image">
+          <h2 class="card-title">Logistic Regression for Classification Problems</h2>
+          <p class="blog-date">August 23, 2025</p>
+        </a>
+      </li>
+      <li class="card-item swiper-slide">
+        <a href="https://medium.com/@souravraj664/understanding-the-naive-bayes-classifier-a-beginners-guide-82e1a933bfb4"  target="_blank" class="card-link">
+          <img src="images/naive-bayes.png" alt="" class="card-image">
+          <h2 class="card-title">Understanding the Naive Bayes Classifier: A Beginner’s Guide</h2>
+          <p class="blog-date">August 6, 2025</p>
+        </a>
+      </li>
+      <li class="card-item swiper-slide">
+        <a href="https://medium.com/@souravraj664/the-chi-square-distribution-your-key-to-categorical-data-d173f79b6a0a" target="_blank" class="card-link">
+          <img src="images/chi-sqr.png" alt="" class="card-image">
+          <h2 class="card-title">The Chi-Square Distribution: Your Key to Categorical Data</h2>
+          <p class="blog-date">July 23, 2025</p>
+        </a>
+      </li>
+      <li class="card-item swiper-slide">
+        <a href="https://medium.com/@souravraj664/hypothesis-testing-a-beginners-guide-d5e10f5b6db6"  target="_blank" class="card-link">
+          <img src="images/hypothesis_testing.jpg" alt="" class="card-image">
+          <h2 class="card-title">Hypothesis Testing: A Beginner’s Guide</h2>
+          <p class="blog-date">July 6, 2025</p>
+        </a>
+      </li>
+      <li class="card-item swiper-slide">
+        <a href="https://medium.com/@souravraj664/key-distributions-for-data-science-e00a2ccdb29c" target="_blank" class="card-link">
+          <img src="images/key_distributions.jpg" alt="" class="card-image">
+          <h2 class="card-title" style="padding-bottom: 30px">Key Distributions for Data Science</h2>
+          <p class="blog-date">February 23, 2025</p>
+        </a>
+      </li>
+    </ul>
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swipe-slide-button swiper-button-prev"></div>
+    <div class="swipe-slide-button swiper-button-next"></div>
+
+    
+  </div>
+</div>
+
+</section>
 
   <!-- Contact Section -->
   <section id="contact" class="wrapper style6">
@@ -228,16 +313,17 @@
         <h2>Contact Me</h2>
         <p>I'd love to connect!</p>
       </header>
-      <form method="post" action="#">
+     <form action="https://api.web3forms.com/submit" method="POST">
+       <input type="hidden" name="access_key" value="120c2d1b-001b-4bcf-9454-0492f0871d4d">
         <div class="row">
           <div class="col-6 col-12-small">
-            <input class='name_b' type="text" name="name" placeholder="Name" />
+            <input class='name_b' type="text" name="name" placeholder="Name" required>
           </div>
           <div class="col-6 col-12-small">
-            <input class='email_b' type="email" name="email" placeholder="Email" />
+            <input class='email_b' type="email" name="email" placeholder="Email" required>
           </div>
           <div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
+										<input type="text" name="subject" id="subject" placeholder="Subject" required>
           </div>
           <div class="col-12">
             <textarea class='message_b' name="message" placeholder="Your Message"></textarea>
@@ -262,11 +348,11 @@
 						<h3 style="padding-top: 20px;">Find me on ...</h3>
 							<ul class="social", style="padding-bottom: 20px;">
 								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							  <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							  <li><a href="https://www.linkedin.com/in/sourav664" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 								<li><a href="https://github.com/sourav664" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
 							</ul>
 					  <hr/>
-						</div>
+					</div>
       <footer>
       <ul id="copyright">
         <li>&copy; <span id="current-year"></span> Sourav Raj</li>
@@ -343,7 +429,8 @@
   });
 </script>
 
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/swiper.js"></script>
 
 
 	</body>
